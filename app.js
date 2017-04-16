@@ -6,7 +6,7 @@ io = require('socket.io').listen(server);	//web socket server
 //inicializamos puerto serialport
 
 var SerialPort = require("serialport").SerialPort
-var serialPort = new SerialPort("/dev/tty0", { baudrate: 115200 });
+var serialPort = new SerialPort("/dev/ttyAMA0", { baudrate: 115200 });
 
 server.listen(8080); //start the webserver on port 8080
 app.use(express.static('public')); //tell the server that ./public/ contains the static webpages
